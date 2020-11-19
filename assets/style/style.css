@@ -1,0 +1,471 @@
+html,
+body{
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+*{
+	font-family: Arial, Helvetica, sans-serif;
+	color:	#333;
+	box-sizing: border-box;
+}
+
+h3{
+	color: #e5e5e5;
+}
+
+a h3:hover{
+	color: #fff;
+}
+
+a{
+	text-decoration: none;
+}
+
+.wrapper{
+	min-width: 1050px;
+	min-height: 100%;
+	background-color: #141414;
+}
+
+.cadastro{
+    background-color: #efefee;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.colunas{
+    background-color: #fff;
+    min-height: 300px;
+    max-height: 100%;
+    width: 450px;
+    box-shadow: rgba(0,0,0, 0.3) 0 1px 10px;
+    padding: 20px 35px;
+    overflow-y: auto;
+}
+
+.colunas form{
+	display: flex;
+	flex-direction: column;
+	padding-top: 24px;
+}
+
+.colunas form input[type="text"],
+.colunas form input[type="email"],
+.colunas form input[type="password"]{
+	font-size: 14px;
+	margin: 10px 0;
+	border: none;
+	border-bottom: 1px solid #dedede;
+}
+
+.colunas form input[type="submit"]{
+	background-color: #4285f4;
+	color: #fff;
+	height: 36px;
+	width: 100px;
+	border: none;
+	border-radius: 2px;
+	font-weight: 800;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	font-size: 16px;
+}
+
+.colunas .header{
+	padding: 20px 0px;
+}
+
+.colunas h3{
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 32px;
+	margin: 0;
+	padding-top: 16px;
+	color: #000;
+}
+
+.colunas .header span{
+	font-size: 14px;
+}
+
+.colunas .header img{
+	width: 200px;
+}
+
+.mensagemCadastro{
+	font-size: 14px;
+	font-weight: 400;
+	text-decoration: none;
+}
+
+.mensagemEntrar{
+	font-size: 14px;
+	font-weight: 400;
+	text-decoration: none;
+}
+
+.mensagemErro{
+	color: #f00;
+	font-size: 14px;
+	font-weight: 400;
+	text-align: center;
+}
+
+.videoPreview, .imagemPreview{
+	width: 100%;
+}
+
+.previewContainer{
+	position: relative;
+	display: flex;
+}
+
+.previewContainer.small{
+	width: 230px;
+	height: 129px;
+	margin-right: 4px;
+	display: inline-flex;
+}
+
+.previewContainer.small img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.interfacePreview{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	position: absolute;
+}
+
+.interfacePreview .detalhesPrincipais h3{
+	color: #fff;
+	font-size: 40px;
+	margin: 15px 0;
+}
+
+.detalhesPrincipais h4{
+	color: #fff;
+	font-size: 20px;
+	margin: 15px 0;
+}
+
+.interfacePreview .detalhesPrincipais{
+	position: relative;
+	top: 35%;
+	margin-left: 50px;
+	display: flex;
+	flex-direction: column;
+}
+
+.detalhesPrincipais button{
+	background-color: rgba(51,51,51,0.4);
+	color: #fff;
+	border: none;
+	min-width: 150px;
+	padding: 0 38px;
+	height: 50px;
+	max-height: 50px;
+	font-size: 18px;
+	border-radius: 2px;
+	margin-bottom: 15px;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+button i{
+	color: inherit;
+}
+
+.detalhesPrincipais button:hover{
+	background-color: #e6e6e6;
+	color: #000;
+}
+
+.categoria{
+	display: flex;
+	flex-direction: column;
+	padding: 10px 0;
+}
+
+.entidades, 
+.videos{
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
+}
+
+.previewCategorias{
+	padding: 0 50px;
+}
+
+.bannerErro{
+	color: #fff;
+	position: absolute;
+	top: 25%;
+	width: 100%;
+	text-align: center;
+	font-size: 18px;
+}
+
+.temporada{
+	display: flex;
+	flex-direction: column;
+	padding: 10px 50px;
+}
+
+.episodio{
+	display: inline-flex;
+	justify-content: center;
+	margin-right: 4px;
+}
+
+.episodio .conteudo{
+	display: flex;
+	flex-direction: column;
+	width: 230px;
+	position: relative;
+}
+
+.episodio img{
+	width: 230px;
+	height: 129px;
+	object-fit: cover;
+}
+
+.episodio .informacaoVideo h4,
+.episodio .informacaoVideo span{
+	color: #fff;
+	width: 100%;
+	white-space: normal;
+}
+
+.episodio .informacaoVideo {
+	max-height: 200px;
+	overflow-y: auto;
+}
+
+.previewCategorias.noScroll .categoria .entidades {
+    white-space: normal;
+}
+
+.localAssistir video{
+	width: 100%;
+}
+
+.controlesVideo{
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	background-color: rgba(0,0,0,0.3);
+}
+
+.controlesVideo h1{
+	color: #fff;
+}
+
+.controlesVideo button{
+	font-size: 50px;
+	padding: 50px;
+	color: #fff;
+	background-color: transparent;
+	border: none;
+}
+
+.aSeguir{
+	height: 100%;
+	justify-content: center;
+}
+
+.conteudoASeguir button{
+	padding: 0;
+}
+
+.conteudoASeguir h2,
+.conteudoASeguir h3{
+	color: #fff;
+}
+
+.navegacao{
+	z-index: 2;
+}
+
+.seen{
+	color: #2ecc71;
+	font-size: 26px;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+
+.barraTopo{
+	position: fixed;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    height: 95px;
+    box-sizing: border-box;
+    min-width: 1050px;
+    transition: background-color 200ms linear;
+}
+
+.barraTopo.scrolled {
+	background-color: #141414;
+	transition: background-color 200ms linear;
+}
+
+.conteudoLogo{
+	height: 40px;
+}
+
+.conteudoLogo img{
+	height: 100%;
+}
+
+.linkNaveg{
+	display: flex;
+    list-style: none;
+}
+
+.linkNaveg a{
+	color: #fff;
+	font-size: 18px;
+	margin-left: 20px;
+}
+
+.itensDireita{
+	text-align: right;
+	flex: 1;
+}
+
+.itensDireita i{
+	color: #fff;
+	font-size: 20px;
+	margin-left: 10px;
+}
+
+.previewCategorias h1{
+	color: #e5e5e5;
+
+}
+
+.caixaBusca{
+	padding: 100px 50px;
+}
+
+.busca{
+	height: 50px;
+	width: 600px;
+	border: 1px solid #dedede;
+	background-color: transparent;
+	color: #fff;
+	font-size: 20px;
+	padding: 5px 10px;
+	border-radius: 3px;
+}
+
+.containerConfiguracoes{
+	padding-top: 60px;
+    background-color: transparent;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.containerConfiguracoes h2 {
+	color: #fff;
+	margin-top: 1px;
+}
+
+.containerConfiguracoes .formSection {
+	display: flex;
+    flex-direction: column;
+    margin: 1px 0;
+    border-bottom: 1px solid #dedede;
+    padding-bottom: 10px;
+}
+
+.containerConfiguracoes form input[type="text"],
+.containerConfiguracoes form input[type="email"],
+.containerConfiguracoes form input[type="password"]{
+	width: 300px;
+    height: 40px;
+    font-size: 15px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 3px;
+    padding: 0 5px;
+}
+
+.containerConfiguracoes form input[type="submit"]{
+	background-color: #dc1928;
+	width: 100px;
+	height: 40px;
+}
+
+.alertaSucesso,
+.alertaErro{
+	margin: 10px 0;
+}
+
+.alertaErro{
+	color: #dc1928;
+}
+
+.alertaSucesso{
+	color: #2ecc71;
+}
+
+a.botaoExcluir {
+	background-color: #dc1928;
+	color: #fff;
+	height: 30px;
+	width: 130px;
+	border: none;
+	border-radius: 2px;
+	font-weight: 800;
+	/*margin-top: 10px;*/
+	margin-bottom: 20px;
+	font-size: 16px;
+	appearance: push-button;
+    user-select: none;
+    white-space: pre;
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    box-sizing: border-box;
+	padding: 1px 6px;
+	cursor:pointer;
+}
+
+.botaoCancelar {
+	background-color: #dc1928;
+    color: #fff;
+    height: 35px;
+    width: 100px;
+    border: none;
+    border-radius: 2px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: auto;
+    font-size: 16px;
+    appearance: push-button;
+    user-select: none;
+    white-space: pre;
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    box-sizing: border-box;
+    padding: 6px 0px;
+    cursor: pointer;
+}
