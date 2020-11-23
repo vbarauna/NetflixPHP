@@ -3,7 +3,7 @@
         <a href="index.php">
             <img src="assets/images/web.png" alt="Logo">
         </a>                
-    </div
+    </div>
 
     <ul class="linkNaveg">
         <li><a href="index.php">Início</a></li>
